@@ -1,0 +1,9 @@
+<div style="background-color: gainsboro;">
+  <div *ngFor="let item of listItems">
+    <ng-container *ngIf="item.sex === sexToShow">
+      <div>Name: {{ item.name }}</div>
+      <div>Age: {{ item.age }}</div>
+      <hr />
+    </ng-container>
+  </div>
+</div>
