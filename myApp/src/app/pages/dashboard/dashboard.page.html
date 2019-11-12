@@ -5,5 +5,8 @@
 </ion-header>
 
 <ion-content>
-
+  <list [listItems]="students" [sexToShow]="sexToShow"></list>
+  <ion-button expand="block" routerLink="/details" routerDirection="forward">
+    To details
+  </ion-button>
 </ion-content>

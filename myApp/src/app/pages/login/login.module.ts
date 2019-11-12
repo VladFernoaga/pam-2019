@@ -1,15 +1,16 @@
-import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { FormsModule } from '@angular/forms';
-import { Routes, RouterModule } from '@angular/router';
+import { NgModule } from "@angular/core";
+import { CommonModule } from "@angular/common";
+import { FormsModule } from "@angular/forms";
+import { Routes, RouterModule } from "@angular/router";
 
-import { IonicModule } from '@ionic/angular';
+import { IonicModule } from "@ionic/angular";
 
-import { LoginPage } from './login.page';
+import { LoginPage } from "./login.page";
+import { SharedComponentsModule } from "src/app/shared-components/shared-components.module";
 
 const routes: Routes = [
   {
-    path: '',
+    path: "",
     component: LoginPage
   }
 ];
@@ -19,6 +20,7 @@ const routes: Routes = [
     CommonModule,
     FormsModule,
     IonicModule,
+    SharedComponentsModule,
     RouterModule.forChild(routes)
   ],
   declarations: [LoginPage]
