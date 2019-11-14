@@ -1,5 +1,6 @@
 import { Component, OnInit } from "@angular/core";
 import { ListItem } from "src/app/shared-components/list/list.model";
+import { DashboardPage } from "../dashboard/dashboard.page";
 
 @Component({
   selector: "app-details",
