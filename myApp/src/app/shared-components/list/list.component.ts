@@ -11,5 +11,17 @@ export class ListComponent {
   @Input()
   public sexToShow: string;
 
+  listTitle = `My fancy list name`;
+
+  nr1 = 23;
+  nr2 = 17;
+
+  sum(nr1, nr2) {
+    return nr1 + nr2;
+  }
+
+  getListDetails() {
+    return "This are just details";
+  }
   constructor() {}
 }

@@ -1,0 +1,21 @@
+<div id="login-container" style="max-width: 200px">
+  <h3 style="text-align: center">Login</h3>
+  <div class="row no-gutters mb-2">
+    <label class="col align-self-center" for="email">Email: </label>
+    <input class="col form-control" id="email" type="text" />
+  </div>
+  <div class="row no-gutters mb-2">
+    <label class="col align-self-center" for="password">Password: </label>
+    <input class="col form-control" id="password" type="password" />
+  </div>
+  <button
+    class="btn"
+    style="width: 100%"
+    [ngClass]="buttonClass"
+    [ngStyle]="{
+      color: myColor
+    }"
+  >
+    Login
+  </button>
+</div>

@@ -1,4 +1,6 @@
 <div style="background-color: gainsboro;">
+  <div id="title">This is my title: {{ listTitle }}!</div>
+  <div id="title">Sum result: {{ sum(nr1, nr2) }}!</div>
   <div *ngFor="let item of listItems">
     <ng-container *ngIf="item.sex === sexToShow">
       <div>Name: {{ item.name }}</div>
