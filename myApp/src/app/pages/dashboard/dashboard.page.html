@@ -6,6 +6,22 @@
 
 <ion-content>
   <list [listItems]="students" [sexToShow]="sexToShow"></list>
+
+  <h3>Custom student data</h3>
+  <hr />
+
+  <ion-list>
+    <ng-container *ngFor="let student of students">
+      <ion-item>
+        <div class="d-flex justify-content-between" style="width: 100%;">
+          <div>{{student.name}}</div>
+          <div>{{student.age}}</div>
+          <ion-button size="small"> Details</ion-button>
+        </div>
+      </ion-item>
+    </ng-container>
+  </ion-list>
+
   <ion-button expand="block" routerLink="/details" routerDirection="forward">
     To details
   </ion-button>
