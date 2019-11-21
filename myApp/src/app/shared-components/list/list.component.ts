@@ -1,5 +1,5 @@
 import { Component, Input } from "@angular/core";
-import { ListItem } from "./list.model";
+import { Student } from "../../model/student.model";
 
 @Component({
   selector: "list",
@@ -7,7 +7,7 @@ import { ListItem } from "./list.model";
 })
 export class ListComponent {
   @Input()
-  public listItems: Array<ListItem>;
+  public listItems: Array<Student>;
   @Input()
   public sexToShow: string;
 

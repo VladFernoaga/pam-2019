@@ -1,3 +1,3 @@
-export class ListItem {
+export class Student {
   constructor(public name: string, public age: number, public sex: string) {}
 }

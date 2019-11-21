@@ -1,5 +1,5 @@
 import { Component, OnInit } from "@angular/core";
-import { ListItem } from "src/app/shared-components/list/list.model";
+import { Student } from "src/app/model/student.model";
 
 @Component({
   selector: "app-dashboard",
@@ -7,14 +7,14 @@ import { ListItem } from "src/app/shared-components/list/list.model";
   styleUrls: ["./dashboard.page.scss"]
 })
 export class DashboardPage implements OnInit {
-  public students: Array<ListItem> = new Array<ListItem>();
+  public students: Array<Student> = new Array<Student>();
   sexToShow = "m";
   constructor() {
-    this.students.push(new ListItem("Alex", 23, "m"));
-    this.students.push(new ListItem("Alexandra", 23, "f"));
-    this.students.push(new ListItem("Vlad", 25, "m"));
-    this.students.push(new ListItem("Maria", 23, "f"));
-    this.students.push(new ListItem("Alice", 27, "f"));
+    this.students.push(new Student("Alex", 23, "m"));
+    this.students.push(new Student("Alexandra", 23, "f"));
+    this.students.push(new Student("Vlad", 25, "m"));
+    this.students.push(new Student("Maria", 23, "f"));
+    this.students.push(new Student("Alice", 27, "f"));
   }
 
   ngOnInit() {}
