@@ -1,0 +1,10 @@
+<div id="container-cards" class="row no-gutters">
+  <ng-container *ngFor="let card of cards">
+    <div id="card-box" style="height: 100px;" class=" col-6 p-2">
+      <div class="border border-primary" style="height: 100%;">
+        <div>{{ card.title }}</div>
+        <div>{{ card.description }}</div>
+      </div>
+    </div>
+  </ng-container>
+</div>
