@@ -1,12 +1,11 @@
-import { NgModule } from "@angular/core";
 import { CommonModule } from "@angular/common";
+import { NgModule } from "@angular/core";
 import { FormsModule } from "@angular/forms";
-import { Routes, RouterModule } from "@angular/router";
-
+import { RouterModule, Routes } from "@angular/router";
 import { IonicModule } from "@ionic/angular";
-
-import { DashboardPage } from "./dashboard.page";
+import { ApiModule } from "src/app/api/api.module";
 import { SharedComponentsModule } from "src/app/shared-components/shared-components.module";
+import { DashboardPage } from "./dashboard.page";
 
 const routes: Routes = [
   {
@@ -17,6 +16,7 @@ const routes: Routes = [
 
 @NgModule({
   imports: [
+    ApiModule,
     CommonModule,
     FormsModule,
     IonicModule,
