@@ -24,6 +24,20 @@
 
   <cards></cards>
 
+  <h1>Products</h1>
+
+  <ion-list>
+    <ng-container *ngFor="let p of products">
+      <ion-item>
+        <div class="d-flex justify-content-between" style="width: 100%;">
+          <div>{{p.id}}</div>
+          <div>{{p.name}}</div>
+          <div>{{p.description}}</div>
+        </div>
+      </ion-item>
+    </ng-container>
+  </ion-list>
+
   <ion-button expand="block" routerLink="/details" routerDirection="forward">
     To details
   </ion-button>

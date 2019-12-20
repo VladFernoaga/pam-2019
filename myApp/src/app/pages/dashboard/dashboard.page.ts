@@ -1,6 +1,7 @@
 import { Component, OnInit } from "@angular/core";
 import { Student } from "src/app/model/student.model";
 import { ApiService } from "src/app/api/api.service";
+import { Product } from "src/app/model/product.model";
 
 @Component({
   selector: "app-dashboard",
@@ -9,6 +10,7 @@ import { ApiService } from "src/app/api/api.service";
 })
 export class DashboardPage implements OnInit {
   public students: Array<Student> = new Array<Student>();
+  public products: Array<Product> = [];
   sexToShow = "m";
 
   constructor(private apiService: ApiService) {
@@ -20,8 +22,10 @@ export class DashboardPage implements OnInit {
   }
 
   ngOnInit() {
-    this.apiService.getAllProducts().subscribe(res => {
-      console.log(res);
+    this.apiService.getAllProducts().subscribe(apiProducts => {
+      for (let prod of apiProducts) {
+        this.products.push(new Product(prod.name, prod.description, prod.id));
+      }
     });
   }
 }
